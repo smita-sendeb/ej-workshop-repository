@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Salesforce Contacts API
+  description: API to retrieve Salesforce contacts
+  version: 1.0.0
+  contact:
+    name: Salesforce API Team
+    email: support@salesforce.com
+    url: https://www.salesforce.com
+
+paths:
+  /contacts:
+    get:
+      summary: Get all contacts from Salesforce
+      description: Retrieve a list of contacts from Salesforce based on a query.
+      operationId: Get Contacts
+      responses:
+        '200':
+          description: A list of contacts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  totalSize:
+                    type: integer
+                    description: Total number of records found
+                    example: 1
+                  records:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Id:
+                          type: string
+                          description: The unique identifier for the contact
+                          example: 0038b00003E7L9kAAF
+                        FirstName:
+                          type: string
+                          description: The first name of the contact
+                          example: Tom
+                        LastName:
+                          type: string
+                          description: The last name of the contact
+                          example: Saint
+                        Email:
+                          type: string
+                          description: The email address of the contact
+                          example: td@example.com	
+                        Phone:
+                          type: string
+                          description: The phone number of the contact
+                          example: '5779089797'
+        '400':
+          description: Bad request, invalid query or parameters
+        '401':
+          description: Unauthorized, invalid access token or session
+        '403':
+          description: Forbidden, the user does not have permission to access contacts
+        '500':
+          description: Internal Server Error, something went wrong on the server side
+

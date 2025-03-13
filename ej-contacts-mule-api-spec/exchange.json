@@ -1,0 +1,13 @@
+{
+  "main": "ej-mule-api-spec.yaml",
+  "name": "EJ Contacts Mule API",
+  "groupId": "aba21a6b-5c5b-467d-b5bd-b27424559480",
+  "assetId": "ej-contacts-mule-api-spec",
+  "version": "1.0.0",
+  "classifier": "oas",
+  "tags": [],
+  "descriptorVersion": "1.0.0",
+  "organizationId": "aba21a6b-5c5b-467d-b5bd-b27424559480",
+  "apiVersion": "v1",
+  "originalFormatVersion": "3.0"
+}
